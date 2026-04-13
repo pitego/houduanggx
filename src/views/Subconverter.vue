@@ -795,7 +795,7 @@ remoteConfig: [
       form: {
         sourceSubUrl: "",
         clientType: "",
-        customBackend: this.getUrlParam() == "" ? "https://ggxhd.voks.dpdns.org" : this.getUrlParam(),
+        customBackend: this.getUrlParam() == "" ? (import.meta.env.VITE_CUSTOM_BACKEND || "") : this.getUrlParam(),
         shortType: "https://v1.mk/short",
         remoteConfig: import.meta.env.VITE_CUSTOM_CONFIG || "",
         excludeRemarks: "",
