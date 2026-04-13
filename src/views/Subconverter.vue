@@ -797,7 +797,7 @@ remoteConfig: [
         clientType: "",
         customBackend: this.getUrlParam() == "" ? (import.meta.env.VITE_CUSTOM_BACKEND || "") : this.getUrlParam(),
         shortType: "https://v1.mk/short",
-        remoteConfig: import.meta.env.VITE_CUSTOM_CONFIG || "",
+        remoteConfig: import.meta.env.VITE_CUSTOM_CONFIG,
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
