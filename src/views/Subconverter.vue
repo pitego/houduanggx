@@ -360,12 +360,16 @@ export default {
           { value: "https://url.v1.mk" },
           { value: "https://api.v1.mk" },
         ],
-        remoteConfig: [
+remoteConfig: [
           {
-            label: "CM规则",
+            label: "Custom Configuration",
             options: [
               {
-                label: "CM_Online 默认版 识别港美地区(与Github同步)",
+                label: "Private Rules",
+                value: import.meta.env.VITE_CUSTOM_CONFIG
+              },
+              {
+                label: "CM_Online",
                 value: "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online.ini"
               },
               {
