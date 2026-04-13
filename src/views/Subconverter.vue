@@ -361,7 +361,7 @@ export default {
         ],
         remoteConfig: [
           {
-            label: "Custom Configuration",
+            label: "个人自用",
             options: [
               {
                 label: "个人自用规则",
