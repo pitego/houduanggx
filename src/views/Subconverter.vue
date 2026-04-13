@@ -365,7 +365,7 @@ export default {
             options: [
               {
                 label: "个人自用规则",
-                value: import.meta.env.VITE_CUSTOM_CONFIG
+                value: process.env.VUE_APP_CUSTOM_CONFIG
               }
             ]
           },
@@ -799,9 +799,9 @@ export default {
 form: {
         sourceSubUrl: "",
         clientType: "",
-        customBackend: this.getUrlParam() == "" ? (import.meta.env.VITE_CUSTOM_BACKEND || "") : this.getUrlParam(),
+        customBackend: this.getUrlParam() == "" ? (process.env.VUE_APP_CUSTOM_BACKEND || "") : this.getUrlParam(),
         shortType: "https://v1.mk/short",
-        remoteConfig: import.meta.env.VITE_CUSTOM_CONFIG,
+        remoteConfig: process.env.VUE_APP_CUSTOM_CONFIG,
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
