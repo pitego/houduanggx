@@ -365,7 +365,7 @@ remoteConfig: [
             label: "Custom Configuration",
             options: [
               {
-                label: "Private Rules",
+                label: "个人自用规则",
                 value: import.meta.env.VITE_CUSTOM_CONFIG
               },
               {
@@ -797,7 +797,7 @@ remoteConfig: [
         clientType: "",
         customBackend: this.getUrlParam() == "" ? "https://ggxhd.voks.dpdns.org" : this.getUrlParam(),
         shortType: "https://v1.mk/short",
-        remoteConfig: import.meta.env.VITE_CUSTOM_CONFIG || "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online.ini",
+        remoteConfig: import.meta.env.VITE_CUSTOM_CONFIG || "",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
