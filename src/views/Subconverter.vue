@@ -348,7 +348,6 @@ export default {
           "dlj.tf": "https://dlj.tf/short",
         },
         customBackend: {
-           "自用-负载均衡后端": "https://ggxhd.voks.dpdns.org",
           "CM提供-负载均衡后端": "https://subapi.cmliussss.net",
           "CM提供-应急备用后端": "https://subapi.fxxk.dedyn.io",
           "肥羊提供-增强型后端": "https://url.v1.mk",
@@ -360,16 +359,12 @@ export default {
           { value: "https://url.v1.mk" },
           { value: "https://api.v1.mk" },
         ],
-remoteConfig: [
+        remoteConfig: [
           {
-            label: "Custom Configuration",
+            label: "CM规则",
             options: [
               {
-                label: "个人自用规则",
-                value: import.meta.env.VITE_CUSTOM_CONFIG
-              },
-              {
-                label: "CM_Online",
+                label: "CM_Online 默认版 识别港美地区(与Github同步)",
                 value: "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online.ini"
               },
               {
@@ -795,9 +790,9 @@ remoteConfig: [
       form: {
         sourceSubUrl: "",
         clientType: "",
-        customBackend: this.getUrlParam() == "" ? (import.meta.env.VITE_CUSTOM_BACKEND || "") : this.getUrlParam(),
+        customBackend: this.getUrlParam() == "" ? "https://url.v1.mk" : this.getUrlParam(),
         shortType: "https://v1.mk/short",
-        remoteConfig: import.meta.env.VITE_CUSTOM_CONFIG,
+        remoteConfig: "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
